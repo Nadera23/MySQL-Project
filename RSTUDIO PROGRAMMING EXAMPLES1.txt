@@ -1,0 +1,397 @@
+
+R version 4.2.2 (2022-10-31 ucrt) -- "Innocent and Trusting"
+Copyright (C) 2022 The R Foundation for Statistical Computing
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> Print ("hello world")
+Error in Print("hello world") : could not find function "Print"
+> Print ("hello world")
+Error in Print("hello world") : could not find function "Print"
+> print("print hello")
+[1] "print hello"
+> 25 + 56
+[1] 81
+> x <- 28
+> class (x)
+[1] "numeric"
+> 
+> ## [1] "numeric"
+> 
+> # string 
+> y <- "R is fantastic"
+> class (y)
+[1] "character"
+> 
+> 
+> ## [1] "character"
+> 
+> # boolean 
+> z <- TRUE
+> class (z)
+[1] "logical"
+> 
+> 
+> print variable x
+Error: unexpected symbol in "print variable"
+> # Print variable x
+> x <- 42
+> x
+[1] 42
+> 
+> 
+> y <- 10
+> y
+[1] 10
+> 
+> 
+> # we call x and y and apply a substraction 
+> x-y
+[1] 32
+> 
+> 
+> # Numerical
+> vec_num <- c(1, 10, 49)
+> vec_num
+[1]  1 10 49
+> 
+> 
+> vec_chr 
+Error: object 'vec_chr' not found
+> vec_chr <- c("a", "b", "c")
+> vec_chr
+[1] "a" "b" "c"
+> 
+> 
+> # boolean
+> vec_bool <- c(TRUE, FALSE, TRUE)
+> vec_bool
+[1]  TRUE FALSE  TRUE
+> 
+> # create the vectors
+> vect_1 <- c(1, 3, 5)
+> vect_2 <- c(2, 4, 6)
+> # Take the sum of A_vector and B_vector
+> sum_vect <- vect_1 + vect_2
+> # print out total_vector
+> sum_vect
+[1]  3  7 11
+> 
+> 
+> # slice the first five rows of the vector
+> slice_vector <- c(1,2,3,4,5,6,7,8,9,10)
+> slice_vector [1:5]
+[1] 1 2 3 4 5
+> 
+> 
+> # Faster way to create adjacent values
+> c(1:10)
+ [1]  1  2  3  4  5  6  7  8  9 10
+> 
+> 
+> # An addition
+> 3 + 4
+[1] 7
+> 
+> # A multiplication
+> 3*5
+[1] 15
+> 
+> 
+> 
+> # A division
+> (5+5) /2 
+[1] 5
+> 
+> 
+> 
+> # Exponentiation
+> 2^5
+[1] 32
+> 
+> 
+> # Modulo
+> 28%%6
+[1] 4
+> 
+> 
+> # create a vector from 1 to 10
+> Logical_vector <- c(1:10)
+> Logical_vector>5 
+ [1] FALSE FALSE FALSE FALSE FALSE  TRUE  TRUE  TRUE  TRUE  TRUE
+> 
+> 
+> 
+> #Print value strictly above 5
+> Logical_vector[(Logical_vector>4)] & [(Logical_vector<7)]
+Error: unexpected '[' in "Logical_vector[(Logical_vector>4)] & ["
+> 
+> 
+> #Print value strictly above 5
+> Logical_vector[(Logical_vector>4) & (Logical_vector<7)]
+[1] 5 6
+> 
+> 
+> 
+> # Construct a matrix with 5 rows that contain the numbers 1 up to 10 and byrow = TRUE
+> matrix_a <- matrix(1:10, byrow = TRUE, nrow=5) 
+> matrix_a
+     [,1] [,2]
+[1,]    1    2
+[2,]    3    4
+[3,]    5    6
+[4,]    7    8
+[5,]    9   10
+> 
+> 
+> # Print dimension of matrix with DIM()
+> dim(matrix_a)
+[1] 5 2
+> 
+> 
+> 
+> # Construct a matrix with 5 rows that contain the numbers 1 up 10 and byrow = FALSE 
+> matrix_b <- matrix(1:10, byrow = FALSE, nrow=5)
+> matrix_b
+     [,1] [,2]
+[1,]    1    6
+[2,]    2    7
+[3,]    3    8
+[4,]    4    9
+[5,]    5   10
+> 
+> 
+> # Print dimension of the matrix with dim() 
+> dimmatrix_b
+Error: object 'dimmatrix_b' not found
+> dimmatrix_b
+Error: object 'dimmatrix_b' not found
+> # Print dimension of the matrix with dim()
+> dim(matrix_b)
+[1] 5 2
+> 
+> 
+> matrix_c <- matrix(1:12, byrow=FALSE, ncol = 3)
+> matrix_c
+     [,1] [,2] [,3]
+[1,]    1    5    9
+[2,]    2    6   10
+[3,]    3    7   11
+[4,]    4    8   12
+> 
+> 
+> dim(matrix_c)
+[1] 4 3
+> 
+> 
+> # concatenate c(1:5) to the matrix_a
+> matrix_a1 <- cbind(matrix_a, c(1:5))
+> # Check the dimension
+> dim(matrix_a1)
+[1] 5 3
+> 
+> 
+> matrix_a1
+     [,1] [,2] [,3]
+[1,]    1    2    1
+[2,]    3    4    2
+[3,]    5    6    3
+[4,]    7    8    4
+[5,]    9   10    5
+> 
+> 
+> matrix_a2 <- cbind(matrix_a2, matrix_c)
+Error in cbind(matrix_a2, matrix_c) : object 'matrix_a2' not found
+> 
+> 
+> matrix_c <-matrix(1:12, byrow = FALSE, ncol = 3)
+> matrix_d <- cbind(matrix_a2, matrix_c)
+Error in cbind(matrix_a2, matrix_c) : object 'matrix_a2' not found
+> 
+> 
+> matrix_c <-matrix(1:12, byrow = FALSE, ncol = 3)
+> matrix_d <- cbind(matrix_a2, matrix_c)
+Error in cbind(matrix_a2, matrix_c) : object 'matrix_a2' not found
+> matrix_d <-cbind(matrix_a2, matrix_c)
+Error in cbind(matrix_a2, matrix_c) : object 'matrix_a2' not found
+> 
+> matrix_c <-matrix(1:12, byrow = FALSE, ncol = 3)
+> 
+> 
+> matrix_c <-matrix(1:12, byrow = FALSE, ncol = 3)
+> matrix_d <- cbind(matrix_a1, matrix_c)
+Error in cbind(matrix_a1, matrix_c) : 
+  number of rows of matrices must match (see arg 2)
+> matrix_a1
+     [,1] [,2] [,3]
+[1,]    1    2    1
+[2,]    3    4    2
+[3,]    5    6    3
+[4,]    7    8    4
+[5,]    9   10    5
+> matrix_c
+     [,1] [,2] [,3]
+[1,]    1    5    9
+[2,]    2    6   10
+[3,]    3    7   11
+[4,]    4    8   12
+> 
+> matrix_a1 <-cbind(matrix_a1, c(1:5)
++                   
++ 
++ 
++ 
++ matrix_c <-matrix(1:12, byrow = FALSE, ncol = 3)
+Error: unexpected symbol in:
+"
+matrix_c"
+> matrix_a1 <-cbind(matrix_a1, c(1:5))
+> matrix_a1
+     [,1] [,2] [,3] [,4]
+[1,]    1    2    1    1
+[2,]    3    4    2    2
+[3,]    5    6    3    3
+[4,]    7    8    4    4
+[5,]    9   10    5    5
+> 
+> 
+> 
+> matrix_c <-matrix(1:12, byrow = FALSE, ncol = 3)
+> # Create a vector of 3 columns
+> add_row <- c(1:3)
+> # Append to the matrix
+> matrix_c <- rbind(matrix_c, add_row)
+> # Check the dimension
+> dim(matrix_c)
+[1] 5 3
+> 
+> 
+> vec = c(1, 2, 3, 4)
+> print ("some of the vector:")
+[1] "some of the vector:"
+> 
+> 
+> inbuilt sum method   
+Error: unexpected symbol in "inbuilt sum"
+> # inbuilt sum method
+> print(sum(vec))
+[1] 10
+> 
+> # using inbuilt mean method
+> print("Mean of the vector:")
+[1] "Mean of the vector:"
+> print(mean(vec))
+[1] 2.5
+> 
+> 
+> # using inbuilt product method
+> print("Product of the vector:")
+[1] "Product of the vector:"
+> print(prod(vec))
+[1] 24
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> vec = c(1.1, 2, 3.0)
+> print("Sum of the vector:")
+[1] "Sum of the vector:"
+> 
+> # inbuilt sum method
+> print(sum(vec))
+[1] 6.1
+> 
+> # using inbuilt mean method
+> print("Mean of the vector:")
+[1] "Mean of the vector:"
+> print(mean(vec))
+[1] 2.033333
+> 
+> 
+> # using inbuilt product method
+> print("Product of the vector:")
+[1] "Product of the vector:"
+> print(prod(vec))
+[1] 6.6
+> 
+> 
+> # declaring a vector
+> vec = c(1.1,NA, 2, 3.0,NA)
+> print("Sum of the vector:")
+[1] "Sum of the vector:"
+> 
+> 
+> # inbuilt sum method
+> print(sum(vec))
+[1] NA
+> 
+> # using inbuilt mean method
+> print("Mean of the vector with NaN values:")
+[1] "Mean of the vector with NaN values:"
+> 
+> 
+> # not ignoring missing values
+> print(mean(vec))
+[1] NA
+> 
+> 
+> # ignoring missing values
+> print("Mean of the vector without NaN values:")
+[1] "Mean of the vector without NaN values:"
+> 
+> print(mean(vec,na.rm = TRUE))
+[1] 2.033333
+> 
+> # using inbuilt product method
+> print("product of the vector:")
+[1] "product of the vector:"
+> print(prod(vec))
+[1] NA
+> 
+> data.frame(df, stringsAsFactors = TRUE)
+Error in as.data.frame.default(x[[i]], optional = TRUE) : 
+  cannot coerce class ‘"function"’ to a data.frame
+> 
+> 
+> # Create a, b, c, d variables
+> a <- c(10,20,30,40)
+> b <- c('book', 'pen', 'textbook', 'pencil_case')
+> c <- c(TRUE,FALSE,TRUE,FALSE)
+> d <- c(2.5, 8, 10, 7)
+> # Join the variables to create a data frame
+> df <- data.frame(a,b,c,d)
+> df
+   a           b     c    d
+1 10        book  TRUE  2.5
+2 20         pen FALSE  8.0
+3 30    textbook  TRUE 10.0
+4 40 pencil_case FALSE  7.0
+> 
+> 
+> # Name the data frame
+> names(df) <- c('ID', 'items', 'store', 'price')
+> df
+  ID       items store price
+1 10        book  TRUE   2.5
+2 20         pen FALSE   8.0
+3 30    textbook  TRUE  10.0
+4 40 pencil_case FALSE   7.0
+> 
+> 
+> # Print the structure
+> 
